@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "scripts": {
     "start": "ts-node ./index.ts",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }

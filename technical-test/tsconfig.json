@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
     "target": "ESNext",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
     "strict": true,
     "skipLibCheck": true
   }
