@@ -125,6 +125,7 @@ export abstract class BaseDatabaseModel {
         const updatedDocument = { ...matchedDocument, ...dataToUpdate };
         updatedDocuments.push(updatedDocument);
         return {
+          ...acc,
           [matchedDocument._id]: updatedDocument,
         };
       }, {}),
