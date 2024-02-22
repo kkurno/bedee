@@ -25,6 +25,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Krub/Krub-Regular.ttx",
+            "./assets/fonts/Krub/Krub-Medium.ttx",
+            "./assets/fonts/Krub/Krub-SemiBold.ttx"
+          ]
+        }
+      ]
+    ]
   }
 }
