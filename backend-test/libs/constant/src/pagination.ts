@@ -1,0 +1,1 @@
+export const MAXIMUM_TODO_LISTS_PER_PAGE = 12;
