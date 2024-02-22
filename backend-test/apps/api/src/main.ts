@@ -4,7 +4,6 @@ import { VersioningType } from '@nestjs/common';
 import { AppConfigService } from '@lib/app-config';
 import { NestJsLogger } from '@lib/logger';
 import { ApiModule } from './module';
-import { DatabaseStorage } from '@lib/database/database.storage';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(ApiModule, {

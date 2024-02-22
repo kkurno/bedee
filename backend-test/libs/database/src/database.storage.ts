@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import { resolve } from 'path';
 import { CollectionData, CollectionKey, DocumentKey, StorageData } from './constants/database.constant';
-import { ArrayElementType } from '@lib/constant/utility-type';
 
 const DATA_FILE_PATH = `${resolve(process.env.ROOT_DIR as string)}/__data.json`;
 const ENCODING: BufferEncoding = 'utf8';
@@ -22,9 +21,9 @@ export class DatabaseStorage {
     DatabaseStorage.memoryStorageData = JSON.parse(fs.readFileSync(DATA_FILE_PATH, ENCODING));
   }
 
-  static async connect() {
+  static async connect(options?: { storagePath?: string }) {
     if (!DatabaseStorage.isConnected) {
-      if (!fs.existsSync(DATA_FILE_PATH)) {
+      if (!fs.existsSync(options?.storagePath ?? DATA_FILE_PATH)) {
         this.writeFileFromMemory();
       }
       this.readFileToMemory();

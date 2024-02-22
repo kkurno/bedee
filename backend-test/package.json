@@ -18,11 +18,8 @@
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
     "type-check": "tsc --noEmit",
     "lint-and-type-check": "npm run lint && npm run type-check",
-    "test": "jest --detectOpenHandles --forceExit",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e:api": "jest --config ./apps/api/test/jest-e2e.json"
+    "test": "ROOT_DIR=. jest --detectOpenHandles --forceExit",
+    "test:watch": "ROOT_DIR. jest --watch"
   },
   "dependencies": {
     "@nestjs/common": "^10.3.3",
@@ -76,7 +73,6 @@
     ],
     "coverageDirectory": "./coverage",
     "testEnvironment": "node",
-    "globalSetup": "./test-setup.ts",
     "roots": [
       "<rootDir>/apps/",
       "<rootDir>/libs/"
