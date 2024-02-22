@@ -30,9 +30,7 @@ const generateNumber = (min: number, max: number) => {
 };
 
 const generateOperator = () => {
-  return [Operator.Plus, Operator.Minus, Operator.Multiply][
-    generateNumber(0, Object.values(Operator).length - 1)
-  ];
+  return [Operator.Plus, Operator.Minus, Operator.Multiply][generateNumber(0, Object.values(Operator).length - 1)];
 };
 
 const generateChoice = (
@@ -48,9 +46,7 @@ const generateChoice = (
   const value = calculate(a, b, operator);
   const valueString = value.toString();
 
-  const isDuplicated = options?.existingChoices?.some(
-    (choice) => choice.choice.value === valueString,
-  );
+  const isDuplicated = options?.existingChoices?.some((choice) => choice.choice.value === valueString);
   const isExhausted = retryTimes > CONFIG.maximumChoiceGeneratingRetryTimes;
 
   if (!isExhausted && isDuplicated) {
@@ -73,9 +69,7 @@ const generateChoice = (
   };
 };
 
-const generateChoices = (options: {
-  total: number;
-}): { correctChoice: RandomChoice; allChoices: RandomChoice[] } => {
+const generateChoices = (options: { total: number }): { correctChoice: RandomChoice; allChoices: RandomChoice[] } => {
   if (options.total < 1) {
     throw new Error('total choices must be greater than 0');
   }

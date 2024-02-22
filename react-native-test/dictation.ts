@@ -12,6 +12,7 @@ const Dict: Dictionary = {
   },
   label: {
     loading: 'Loading..',
+    score: 'Your Score',
   },
   error: {
     unknown: 'An error occured',

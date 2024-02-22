@@ -24,10 +24,7 @@ const QuestionCard: React.FC = () => {
       </View>
       <View style={styles.choicesContainer}>
         {currentQuestion.choices.map((choice) => (
-          <TouchableHighlight
-            key={`${choice.label}_${choice.value}`}
-            underlayColor={STYLES.color.secondary}
-            onPress={() => exam.answer(choice)}>
+          <TouchableHighlight key={`${choice.label}_${choice.value}`} underlayColor={STYLES.color.secondary} onPress={() => exam.answer(choice)}>
             <View style={styles.choiceContainer}>
               <Text style={styles.choiceText}>{choice.label}</Text>
             </View>

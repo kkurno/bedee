@@ -43,10 +43,7 @@ const examReducer: Reducer<ExamState, ExamAction> = (state, action) => {
 };
 
 const useExam = (options?: { total?: number; totalChoicesPerQuestion: number }) => {
-  const {
-    total = CONFIG.defaultTotalQuestions,
-    totalChoicesPerQuestion = CONFIG.defaultTotalChoicesPerQuestion,
-  } = options ?? {};
+  const { total = CONFIG.defaultTotalQuestions, totalChoicesPerQuestion = CONFIG.defaultTotalChoicesPerQuestion } = options ?? {};
 
   const _getQuestions = () => generateQuestions({ total, totalChoicesPerQuestion });
 
