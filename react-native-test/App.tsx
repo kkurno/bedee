@@ -1,5 +1,5 @@
 import * as SplashScreen from 'expo-splash-screen';
-import { Text } from 'react-native';
+import { SafeAreaView, StyleSheet, Text } from 'react-native';
 
 import InnerApp from './components/app/InnerApp';
 import { ExamContextProvider } from './contexts/exam';
@@ -22,7 +22,15 @@ export default function App() {
 
   return (
     <ExamContextProvider>
-      <InnerApp />
+      <SafeAreaView style={styles.container}>
+        <InnerApp />
+      </SafeAreaView>
     </ExamContextProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
