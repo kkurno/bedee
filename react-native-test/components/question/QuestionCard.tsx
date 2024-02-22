@@ -43,6 +43,7 @@ export default QuestionCard;
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    maxWidth: 768,
     paddingHorizontal: 16,
     paddingVertical: 24,
     borderRadius: 4,

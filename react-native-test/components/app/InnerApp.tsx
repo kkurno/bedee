@@ -66,5 +66,9 @@ const styles = StyleSheet.create({
   footer: {
     flexShrink: 0,
     display: 'flex',
+    justifyContent: 'center',
+    maxWidth: 300,
+    width: '100%',
+    marginHorizontal: 'auto',
   },
 });
